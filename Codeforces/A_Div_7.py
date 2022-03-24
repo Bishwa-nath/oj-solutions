@@ -1,0 +1,17 @@
+import sys
+def get_ints(): return map(int, sys.stdin.readline().strip().split())
+def get_ls(): return list(map(int, sys.stdin.readline().strip().split()))
+
+def main():
+    for _ in range(int(input())):
+        n = int(input())
+        if n%7 == 0:
+            print(n)
+        else:
+            n -= n%10
+            n += 7 - n%7
+            print(n)
+
+if __name__ == "__main__":
+    main()
+    
